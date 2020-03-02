@@ -27,6 +27,29 @@
 # x = posição inicial
 # y = posição que deseja chegar ou posição maior
 # d = distância fixa que o sapo pula
+#   X = 10
+#   Y = 85
+#   D = 30
+
+# def solution(x, y, d):
+#     if  ( x == y): # se a posição inicial for igual a que deseja chegar ele não pula
+#       pulos = 0
+#     elif (y - x) / d == 0:
+#       pulos = y - x % d
+#     else:
+#       pulos = ((y - x) / d) + 1 # soma + 1 para ele pular
+#     return pulos
+#
+# print (solution(10,85,30))
 
 def solution(x, y, d):
-  pass
+  # if x == y: # esse if é desnecessário, pois ele não precisa verificar se está no mesmo lugar
+  #   pulo = 0
+  #   return pulo
+  diferenca = y - x
+  pulos = diferenca // d
+  if diferenca % d != 0:
+    return pulos + 1
+  return pulos
+
+print (solution(10,85,30))
