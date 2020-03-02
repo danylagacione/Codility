@@ -39,15 +39,23 @@
 # K = 4
 # a função deve retornar[1, 2, 3, 4]
 
+#usar o pop para tirar o último item da lista e depois em uma variável o insert para inserir no começo da lista
 A = [3, 8, 9, 7, 6]
-
-def solution(A, k):
+def solution(A:list , k):
    for item in range(k):
         ultimo = A[-1]
-        restante = A[:-1] #usar o pop para tirar o último item da lista e depois em uma variável o insert para inserir no começo da lista
+        restante = A[:-1]
         A = [ultimo, *restante]
 
         return A
-
 A = [3, 8, 9, 7, 6]
 print(solution(A,3))
+
+# def solution(A:list, k):
+#    for item in range(k):
+#         ultimo = A.pop(-1)
+#         inserindo = A.insert(0, ultimo)
+#         A = [ultimo, *inserindo]
+#         return A
+
+
