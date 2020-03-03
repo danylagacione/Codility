@@ -28,13 +28,20 @@
 #soma (A) e N (N + 1) / 2  ou ((N + 1)*(N + 2))/2
 
 A = [2,3,1,5]
-def solution (A : list):
-    lista = set(A)
-    N = len(lista)
-    for i in range(N):
-        total1 = ((N + 1) * (N+2))
-        div = total1 // 2
-        total = div[i]
-    return total
+# def solution (A : list):
+#     valor1 = (len(A)+2)
+#     valor2 = valor1 * (len(A) + 1)
+#     total = valor2 // 2
+#     for item in A:
+#         total = A
+#     return item
+# print(solution(A))
+
+def solution(A : list):
+    valor = (len(A) + 2) * (len(A) + 1)/2
+    for item in A:
+         valor -= item
+    return int(valor)
 
 print(solution(A))
+

@@ -16,7 +16,7 @@
 #   A [4] = 3
 # Podemos dividir esta fita em quatro lugares:
 #
-# P = 1, diferença = | 3 - 10 | = 7
+# P = 1, diferença = | 3 - 10 | = 7 # o P é onde a lista vai ser fatiada/cortada
 # P = 2, diferença = | 4 - 9 | = 5
 # P = 3, diferença = | 6 - 7 | = 1
 # P = 4, diferença = | 10 - 3 | = 7
@@ -39,3 +39,20 @@
 #
 # N é um número inteiro dentro do intervalo [ 2 .. 100.000 ];
 # cada elemento da matriz A é um número inteiro dentro do intervalo [ -1.000 .. 1.000 ].
+
+# função abs ela retorna o valor absoluto do número que foi especificado
+
+a = [3,1,2,4,3]
+def solution(a):
+    corte1 = a[0] # corta a primeira fatia da lista a = [0]
+    corte2 = sum(a[1:]) # soma as fatias restantes da lista a partir da posição 1
+    diferenca_minima = abs(corte1 - corte2) # tiro o a[0] - a soma da do segundo corte(o que restou da lista)
+    for item in range(1, len(a)-1): # pega a partir do primeiro índice, passa por toda a lista e corta novamente o primeiro item da lista
+        corte1 += a[item]
+        corte2 -= a[item]
+        if abs(corte1 - corte2) < diferenca_minima:# a função abs retorna o valor absoluto do número que foi dado, no caso corte1 - corte2
+            diferenca_minima = abs(corte1 - corte2)
+    return diferenca_minima
+
+print(solution(a))
+

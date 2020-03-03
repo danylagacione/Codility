@@ -1,3 +1,4 @@
+
 # Um sapo pequeno quer chegar ao outro lado de um rio. O sapo está inicialmente localizado em uma margem do rio (posição 0)
 # e deseja chegar à margem oposta (posição X + 1). As folhas caem de uma árvore na superfície do rio.
 #
@@ -46,5 +47,7 @@
 #
 # N e X são números inteiros dentro do intervalo [ 1 .. 100.000 ];
 # cada elemento da matriz A é um número inteiro dentro do intervalo [ 1 .. X ].
+
 # n = folhas
 #[k] = posição que a folha cai
+# x = 5 
